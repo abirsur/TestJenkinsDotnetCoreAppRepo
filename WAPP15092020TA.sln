@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAPP15092020TA", "WAPP15092020TA\WAPP15092020TA.csproj", "{A4FFF06F-2B8B-4A6D-86C4-137DE4A0B26D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestWAPP15092020TA", "NUnitTestWAPP15092020TA\NUnitTestWAPP15092020TA.csproj", "{F8C80882-F0B3-4883-BDED-C8A0CACB6E74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4FFF06F-2B8B-4A6D-86C4-137DE4A0B26D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4FFF06F-2B8B-4A6D-86C4-137DE4A0B26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4FFF06F-2B8B-4A6D-86C4-137DE4A0B26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4FFF06F-2B8B-4A6D-86C4-137DE4A0B26D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8C80882-F0B3-4883-BDED-C8A0CACB6E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C80882-F0B3-4883-BDED-C8A0CACB6E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C80882-F0B3-4883-BDED-C8A0CACB6E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C80882-F0B3-4883-BDED-C8A0CACB6E74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A081975-3E47-40FF-A592-97AF05BDC8D6}
+	EndGlobalSection
+EndGlobal
