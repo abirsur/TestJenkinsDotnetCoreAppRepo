@@ -1,0 +1,48 @@
+pipeline 
+{
+    agent any
+
+    tools 
+	{
+        .NETSDK "DotNetCore"
+    }
+
+    stages 
+	{
+        stage('Checkout') 
+		{
+			steps 
+			{
+				git credentialsId: 'abirsur', url: 'https://github.com/abirsur/TestJenkinsDotnetCoreAppRepo.git', branch: 'master'
+			}
+		}
+		stage('Restore Packages') 
+		{
+			 steps 
+			 {
+				bat "dotnet restore"
+			 }
+		}
+		stage('Clean') 
+		{
+			 steps 
+			 {
+			  bat "dotnet clean"
+			 }
+		}
+		stage('Build') 
+		{
+			 steps 
+			 {
+			  bat "dotnet build --configuration Release"
+			 }
+		}
+		stage('Build2') 
+		{
+			 steps 
+			 {
+			  bat "dotnet pack --no-build --output nupkgs"
+			 }
+		}
+    }
+}
