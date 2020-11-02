@@ -1,0 +1,31 @@
+node{
+    stage('Checkout Code')
+       git credentialsId: '6600afeb-b75b-4192-8218-6de276376b41', url: 'https://github.com/abirsur/TestJenkinsDotnetCoreAppRepo.git'
+        
+    stage('Clean Application'){
+        dotnetClean project: 'WAPP15092020TA.csproj', workDirectory: 'WAPP15092020TA'
+    }
+      
+    stage ('Restore Packages'){
+        dotnetRestore project: 'WAPP15092020TA.csproj', workDirectory: 'WAPP15092020TA'
+    }
+    
+    stage ('Build Application'){
+        dotnetBuild project: 'WAPP15092020TA.csproj',  workDirectory: 'WAPP15092020TA'
+    }
+    
+    stage ('UnitTest Application'){
+        dotnetTest project: 'NUnitTestWAPP15092020TA.csproj', workDirectory: 'NUnitTestWAPP15092020TA'
+    }
+   
+    stage('Building Image') {
+        docker.build "locker77/core-app-abirs:$BUILD_NUMBER"
+    } 
+    
+    stage('Store Image to Registry') {
+        dockerImage = "locker77/core-app-abirs:$BUILD_NUMBER"
+            docker.withRegistry('', 'dockercred') {
+                sh 'docker push '+ dockerImage
+        }
+    }
+}
