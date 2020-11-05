@@ -8,9 +8,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTestWAPP15092020TA", "NUnitTestWAPP15092020TA\NUnitTestWAPP15092020TA.csproj", "{F8C80882-F0B3-4883-BDED-C8A0CACB6E74}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{649B1BFF-1836-4F76-8118-35001D087453}"
-	ProjectSection(SolutionItems) = preProject
-		gitignore.txt = gitignore.txt
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
