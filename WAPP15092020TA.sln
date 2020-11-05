@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAPP15092020TA", "WAPP15092020TA\WAPP15092020TA.csproj", "{A4FFF06F-2B8B-4A6D-86C4-137DE4A0B26D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WAPP15092020TA", "WAPP15092020TA\WAPP15092020TA.csproj", "{A4FFF06F-2B8B-4A6D-86C4-137DE4A0B26D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestWAPP15092020TA", "NUnitTestWAPP15092020TA\NUnitTestWAPP15092020TA.csproj", "{F8C80882-F0B3-4883-BDED-C8A0CACB6E74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTestWAPP15092020TA", "NUnitTestWAPP15092020TA\NUnitTestWAPP15092020TA.csproj", "{F8C80882-F0B3-4883-BDED-C8A0CACB6E74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{649B1BFF-1836-4F76-8118-35001D087453}"
+	ProjectSection(SolutionItems) = preProject
+		gitignore.txt = gitignore.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

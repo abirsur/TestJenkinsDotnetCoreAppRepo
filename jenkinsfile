@@ -1,6 +1,6 @@
 node{
     stage('Checkout Code')
-       git credentialsId: '6600afeb-b75b-4192-8218-6de276376b41', url: 'https://github.com/abirsur/TestJenkinsDotnetCoreAppRepo.git'
+       git credentialsId: 'git_cred', url: 'https://github.com/abirsur/TestJenkinsDotnetCoreAppRepo.git'
         
     stage('Clean Application'){
         dotnetClean project: 'WAPP15092020TA.csproj', workDirectory: 'WAPP15092020TA'
@@ -24,8 +24,12 @@ node{
     
     stage('Store Image to Registry') {
         dockerImage = "locker77/core-app-abirs:$BUILD_NUMBER"
-            docker.withRegistry('', 'dockercred') {
+            docker.withRegistry('', 'docker_hub_cred') {
                 sh 'docker push '+ dockerImage
         }
+    }
+    
+    stage('Deploy to Azure-Kubernetes'){
+        kubernetesDeploy configs: '**/app-deploy.yaml', kubeConfig: [path: ''], kubeconfigId: 'azure-k8sconfigs', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
     }
 }
