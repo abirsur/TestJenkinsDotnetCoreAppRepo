@@ -13,7 +13,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Start Build Job'
-        bat 'dotnet build'
+        sh 'dotnet build'
       }
     }
 
