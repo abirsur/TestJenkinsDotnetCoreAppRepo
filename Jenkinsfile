@@ -4,9 +4,9 @@ pipeline {
     stage('Clean & Restore') {
       steps {
         echo 'Start Cleaning Job'
-        bat 'dotnet clean'
+        sh 'dotnet clean'
         echo 'Start Restore Job'
-        bat 'dotnet restore'
+        sh 'dotnet restore'
       }
     }
 
